@@ -11,8 +11,9 @@
     gtag('config', 'AW-18092937491');
     </script> -->
     
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com;">
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com;"> -->
      <!-- Google tag (gtag.js) -->
+      <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net; img-src 'self' data: https://www.google.com https://www.google.com.eg https://googleads.g.doubleclick.net https://www.googleadservices.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com https://www.google.com.eg https://googleads.g.doubleclick.net https://www.googleadservices.com;">
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18092937491"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -35,8 +36,10 @@
           'send_to': 'AW-18092937491/n1KrCK_qpKkcEJOisbND',
           'event_callback': callback
         });
-
+        setTimeout(callback, 1000); // أمان إضافي للإرسال
         return false;
+
+       
       }
     </script>
     <meta charset="UTF-8">
