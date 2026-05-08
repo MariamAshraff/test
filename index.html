@@ -23,25 +23,37 @@
         gtag('config', 'G-NDR5MHCCXX');
     </script>
     <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
+        // function gtag_report_conversion(url) {
+        //     var callback = function () {
+        //         if (typeof (url) != 'undefined') {
+        //             window.location = url;
+        //         }
+        //     };
 
+        //     gtag('event', 'conversion', {
+        //         'send_to': 'AW-18092937491/n1KrCK_qpKkcEJOisbND',
+        //         'event_callback': callback
+        //     });
+        //     gtag('event', 'whatsapp_click', {
+        //         'send_to': 'G-NDR5MHCCXX',
+        //         'event_category': 'contact',
+        //         'event_label': url});
+        //     // setTimeout(callback, 1000); // 
+        //     return false;
+
+
+        // }
+       function gtag_report_conversion() {
             gtag('event', 'conversion', {
-                'send_to': 'AW-18092937491/n1KrCK_qpKkcEJOisbND',
-                'event_callback': callback
+                'send_to': 'AW-18092937491/n1KrCK_qpKkcEJOisbND'
             });
-            gtag('event', 'whatsapp_click', {
+            gtag('event', 'contact_click', {
                 'send_to': 'G-NDR5MHCCXX',
-                'event_category': 'contact',
-                'event_label': url});
-            // setTimeout(callback, 1000); // 
-            return false;
-
-
+                'event_category': 'Engagement',
+                'event_label': 'WhatsApp/Phone'
+            });
+            console.log("تم إرسال الإحالة بنجاح!");
+            return true; 
         }
     </script>
     <meta charset="UTF-8">
@@ -323,19 +335,19 @@
                 والغسالات والأجهزة المنزلية الأخرى. بصفتنا أول الخبراء في هذا المجال ، فإننا نضمن أن خدماتنا ستصل إليك
                 أينما كنت .</p>
             <div class="btn-group">
-                <a href="tel:01507780599" onclick="return gtag_report_conversion('tel:01507780599');"
+                <a href="tel:01507780599" onclick="return gtag_report_conversion();"
                     class="btn btn-call">
                     <i class="fas fa-phone-alt"></i> اتصل الآن
                 </a>
-                <!-- <a href="https://wa.me/201507780599"
-                    onclick="return gtag_report_conversion('https://wa.me/201507780599');" class="btn btn-wa">
+                <a href="https://wa.me/201507780599"
+                    onclick="return gtag_report_conversion();" class="btn btn-wa" target="_blank">
                     <i class="fab fa-whatsapp"></i> واتساب
-                </a> -->
-                <a href="#" 
+                </a>
+                <!-- <a href="#" 
                     onclick="gtag_report_conversion();" 
                     class="float-btn wa">
                         <i class="fab fa-whatsapp"></i>
-                </a>
+                </a> -->
             </div>
         </div>
         <div class="hero-image">
@@ -346,19 +358,19 @@
 
 
     <div class="fixed-actions">
-        <a href="tel:01507780599" onclick="return gtag_report_conversion('tel:01507780599');" class="float-btn phone">
+        <a href="tel:01507780599" onclick="return gtag_report_conversion();" class="float-btn phone">
             <i class="fas fa-phone-alt"></i>
         </a>
-        <!-- <a href="https://wa.me/201507780599" onclick="return gtag_report_conversion('https://wa.me/201507780599');"
-            class="float-btn wa">
+        <a href="https://wa.me/201507780599" onclick="return gtag_report_conversion();"
+            class="float-btn wa" target="_blank">
             <i class="fab fa-whatsapp"></i>
-        </a> -->
-        <a href="https://wa.me/201507780599" 
-            onclick="return gtag_report_conversion('https://wa.me/201507780599');" 
+        </a>
+        <!-- <a href="https://wa.me/201507780599" 
+            onclick="return gtag_report_conversion();" 
             class="float-btn wa" 
             target="_blank">
                 <i class="fab fa-whatsapp"></i>
-        </a>
+        </a> -->
     </div>
 
     <script>
